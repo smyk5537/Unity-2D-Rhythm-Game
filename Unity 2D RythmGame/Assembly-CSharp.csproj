@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\NoteBehavior.cs" />
     <Compile Include="Assets\Scripts\BackgroundBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\NoteController.cs" />
+    <Compile Include="Assets\Scripts\ObjectPooler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
