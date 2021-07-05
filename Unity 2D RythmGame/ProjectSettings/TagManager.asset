@@ -54,9 +54,9 @@ TagManager:
   - name: Notes
     uniqueID: 3225666051
     locked: 0
-  - name: JudgementEffect
+  - name: Judgement
     uniqueID: 4087811109
     locked: 0
-  - name: New Layer
+  - name: Effect
     uniqueID: 1184933567
     locked: 0

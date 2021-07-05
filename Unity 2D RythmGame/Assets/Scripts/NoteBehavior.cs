@@ -29,7 +29,7 @@ public class NoteBehavior : MonoBehaviour
 
         if (Input.GetKey(keyCode))
         {
-            Debug.Log(judge);
+            GameManager.instance.processJudge(judge, noteType);
             if (judge != GameManager.judges.NONE) gameObject.SetActive(false);
         }
     }
@@ -51,6 +51,7 @@ public class NoteBehavior : MonoBehaviour
         if (other.gameObject.tag == "Miss Line")
         {
             judge = GameManager.judges.MISS;
+            GameManager.instance.processJudge(judge, noteType);
             gameObject.SetActive(false);
         }
         
