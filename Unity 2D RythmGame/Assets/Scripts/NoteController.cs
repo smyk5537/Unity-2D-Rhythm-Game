@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NoteController : MonoBehaviour
 {
@@ -82,7 +83,24 @@ public class NoteController : MonoBehaviour
         {
             StartCoroutine(AwaitMakeNote(notes[i]));
         }
+
+        StartCoroutine(AwaitGameResult(notes[notes.Count - 1].order));
         
+    }
+
+    IEnumerator AwaitGameResult(int order)
+    {
+        yield return new WaitForSeconds(startingPoint + order * bestInterval+8.0f);
+        GameResult();
+    }
+
+    void GameResult()
+    {
+        PlayerInformation.maxCombo = GameManager.instance.maxCombo;
+        PlayerInformation.score = GameManager.instance.score;
+        PlayerInformation.musicTitle = musicTitle;
+        PlayerInformation.musicArtist = musicArtist;
+        SceneManager.LoadScene("GameResultScene");
     }
 
     // Update is called once per frame

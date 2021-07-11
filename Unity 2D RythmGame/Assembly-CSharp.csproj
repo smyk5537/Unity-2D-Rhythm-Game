@@ -58,6 +58,8 @@
     <Compile Include="Assets\Scripts\BackgroundBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\NoteController.cs" />
+    <Compile Include="Assets\Scripts\PlayerInformation.cs" />
+    <Compile Include="Assets\Scripts\GameResultManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Beats\1.txt" />
